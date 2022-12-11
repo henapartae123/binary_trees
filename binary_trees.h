@@ -24,6 +24,7 @@ typedef struct binary_tree_s binary_tree_t;
 
 void btlo_helper(const binary_tree_t *tree, void (*func)(int), size_t level);
 int btic_helper(const binary_tree_t *tree, size_t index, size_t size);
+int btib_helper(const binary_tree_t *tree, int low, int hi);
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
