@@ -36,6 +36,7 @@ int btib_helper(const binary_tree_t *tree, int low, int hi);
 int btia_helper(const binary_tree_t *tree, int low, int hi);
 void sata_helper(avl_t **root, int *array, size_t lo, size_t hi);
 int btih_helper(const binary_tree_t *tree);
+bst_t *bst_min_val(bst_t *root);
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
@@ -77,5 +78,8 @@ avl_t *avl_remove(avl_t *root, int value);
 avl_t *sorted_array_to_avl(int *array, size_t size);
 int binary_tree_is_heap(const binary_tree_t *tree);
 heap_t *heap_insert(heap_t **root, int value);
+heap_t *array_to_heap(int *array, size_t size);
+int heap_extract(heap_t **root);
+int *heap_to_sorted_array(heap_t *heap, size_t *size);
 
 #endif /* BINARY_TREES_H */
