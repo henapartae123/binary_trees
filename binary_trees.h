@@ -23,6 +23,7 @@ struct binary_tree_s
 
 typedef struct binary_tree_s binary_tree_t;
 typedef struct binary_tree_s bst_t;
+typedef struct binary_tree_s avl_t;
 
 void btlo_helper(const binary_tree_t *tree, void (*func)(int), size_t level);
 int btic_helper(const binary_tree_t *tree, size_t index, size_t size);
