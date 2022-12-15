@@ -24,12 +24,14 @@ struct binary_tree_s
 typedef struct binary_tree_s binary_tree_t;
 typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
+typedef struct binary_tree_s heap_t;
 
 void btlo_helper(const binary_tree_t *tree, void (*func)(int), size_t level);
 int btic_helper(const binary_tree_t *tree, size_t index, size_t size);
 int btib_helper(const binary_tree_t *tree, int low, int hi);
 int btia_helper(const binary_tree_t *tree, int low, int hi);
 void sata_helper(avl_t **root, int *array, size_t lo, size_t hi);
+int btih_helper(const binary_tree_t *tree);
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value);
 binary_tree_t *binary_tree_insert_left(binary_tree_t *parent, int value);
@@ -70,5 +72,6 @@ avl_t *array_to_avl(int *array, size_t size);
 avl_t *avl_remove(avl_t *root, int value);
 avl_t *sorted_array_to_avl(int *array, size_t size);
 int binary_tree_is_heap(const binary_tree_t *tree);
+heap_t *heap_insert(heap_t **root, int value);
 
 #endif /* BINARY_TREES_H */
